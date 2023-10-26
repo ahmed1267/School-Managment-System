@@ -49,6 +49,8 @@ studentSchema.pre(/^find/, function(next){
         path: 'school',
         select: '-_v -_id -id -classrooms -students'
     })
+
+    next()
 })
 
 const student= mongoose.model('student', studentSchema)
